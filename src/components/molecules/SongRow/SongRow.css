@@ -1,0 +1,16 @@
+.song-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  min-width: 0;
+}
+.song-row:hover { background: var(--color-hover); }
+.song-row__cover { width: 48px; height: 48px; border-radius: 4px; object-fit: cover; flex-shrink: 0; }
+.song-row__info { min-width: 0; }
+.song-row__title,
+.song-row__subtitle { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.song-row__title { font-size: 14px; font-weight: 500; }
+.song-row__subtitle { font-size: 13px; color: var(--color-text-secondary); }

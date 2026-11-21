@@ -1,5 +1,5 @@
 import { Play } from 'lucide-react'
-import './PlayButton.css'
+import './BotonPlay.css'
 
 interface PlayButtonProps {
   size?: 'sm' | 'md' | 'lg'

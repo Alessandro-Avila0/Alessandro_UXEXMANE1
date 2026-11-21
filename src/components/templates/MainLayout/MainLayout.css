@@ -1,0 +1,15 @@
+.layout {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  height: 100vh;
+}
+.layout__main { overflow-y: auto; min-width: 0; }
+.layout__content { padding: 0 24px 40px; }
+
+@media (max-width: 1024px) {
+  .layout { grid-template-columns: 72px 1fr; }
+}
+@media (max-width: 600px) {
+  .layout { grid-template-columns: 1fr; }
+  .layout__content { padding: 0 16px 90px; }
+}

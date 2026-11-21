@@ -3,7 +3,7 @@ import MainLayout from './components/templates/MainLayout/MainLayout'
 import HomePage from './components/pages/HomePage/HomePage'
 
 function App() {
-  // Estado que simula iniciar / cerrar sesión (bono del examen)
+  //cerrar sesión (bono :U del examn)
   const [isLoggedIn, setIsLoggedIn] = useState(true)
 
   return (

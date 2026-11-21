@@ -1,4 +1,4 @@
-import type { MusicItem, MusicType, UserPlaylist } from '../types/music'
+import type { MusicItem, MusicType, UserPlaylist } from '../types/musica'
 
 const img = (seed: string, size = 300) => `https://picsum.photos/seed/${seed}/${size}`
 

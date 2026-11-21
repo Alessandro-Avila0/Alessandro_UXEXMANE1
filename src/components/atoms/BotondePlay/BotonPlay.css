@@ -1,0 +1,16 @@
+.play-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-text);
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.play-button:hover { transform: scale(1.08); }
+.play-button svg { width: 50%; height: 50%; }
+.play-button--sm { width: 32px; height: 32px; }
+.play-button--md { width: 48px; height: 48px; }
+.play-button--lg { width: 64px; height: 64px; }

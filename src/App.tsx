@@ -1,5 +1,8 @@
+
+import Chip from './components/atoms/etiqueta/chip'
+
 function App() {
-  return <h1>YouTube Music</h1>
+  return <Chip label="Prueba" />
 }
 
 export default App

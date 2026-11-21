@@ -1,0 +1,13 @@
+.chip {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.chip:hover { background: #3a3a3a; }
+.chip--active { background: var(--color-text); color: #000; }

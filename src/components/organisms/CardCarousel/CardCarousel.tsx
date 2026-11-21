@@ -10,7 +10,7 @@ interface CardCarouselProps {
 }
 
 function CardCarousel({ title, items }: CardCarouselProps) {
-  // useRef guarda una referencia al contenedor para poder hacerle scroll
+
   const trackRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: 1 | -1) => {

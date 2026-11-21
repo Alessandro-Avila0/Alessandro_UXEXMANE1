@@ -14,7 +14,7 @@ interface SidebarProps {
 function Sidebar({ isLoggedIn, onLogin }: SidebarProps) {
   const [active, setActive] = useState('home')
 
-  // Historial solo aparece si hay sesión iniciada
+
   const navItems = [
     { id: 'home', label: 'Inicio', icon: <Home size={22} />, private: false },
     { id: 'explore', label: 'Explorar', icon: <Compass size={22} />, private: false },

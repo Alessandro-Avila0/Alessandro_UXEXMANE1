@@ -1,0 +1,45 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 12px;
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-bg);
+}
+.sidebar__brand { display: flex; align-items: center; gap: 20px; padding: 0 16px 16px; }
+.sidebar__logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 18px; }
+.sidebar__logo-dot { width: 20px; height: 20px; border-radius: 50%; background: var(--color-accent); }
+.sidebar__nav { display: flex; flex-direction: column; gap: 4px; }
+.sidebar__divider { border: none; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 12px 0; }
+.sidebar__playlists,
+.sidebar__signin { display: flex; flex-direction: column; gap: 8px; }
+.sidebar__list { display: flex; flex-direction: column; margin-top: 8px; }
+.sidebar__signin p { font-size: 12px; color: var(--color-text-secondary); padding: 0 4px; }
+
+@media (max-width: 1024px) {
+  .sidebar { padding: 16px 6px; align-items: center; }
+  .sidebar__logo,
+  .sidebar__playlists,
+  .sidebar__signin { display: none; }
+  .sidebar__brand { padding: 0 0 16px; }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4px;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .sidebar__brand { display: none; }
+  .sidebar__nav { flex-direction: row; width: 100%; justify-content: space-around; }
+}

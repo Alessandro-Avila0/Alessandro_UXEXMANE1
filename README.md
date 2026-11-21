@@ -31,4 +31,4 @@ Luego va abrir http://localhost:5173 puede copiarlo y pegarlo en algun navegador
 - Contenido destacado y carruseles de recomendaciones
 - Tarjetas reutilizables para canción, álbum, playlist y video
 - Diseño responsive (escritorio, tablet y móvil)
-- Bono: cerrar sesión / vista "Not Logged In"
+- Bono: cerrar sesión / vista "Not Logged In".

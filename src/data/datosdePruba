@@ -1,0 +1,95 @@
+import type { MusicItem, MusicType, UserPlaylist } from '../types/music'
+
+const img = (seed: string, size = 300) => `https://picsum.photos/seed/${seed}/${size}`
+
+const item = (
+  id: string,
+  title: string,
+  subtitle: string,
+  type: MusicType,
+  seed: string,
+): MusicItem => ({ id, title, subtitle, type, cover: img(seed) })
+
+/*{
+  id: 'r',
+  title: 'Apocalypse',
+  subtitle: 'Cigarettes After Sex • Canción',
+  type: 'song',
+  cover: 'https:/',
+}*/
+
+export const moods = [
+  'Relajación', 'Actívate', 'Triste', 'Sueño', 'Romance',
+  'Fiesta', 'Viaje diario', 'Para sentirte bien', 'Entrenamiento', 'Concentración',
+]
+
+export const featured: MusicItem = item(
+  'f1', 'Synchronicity (Remastered 2003)', 'The Police', 'album', 'featured-police',
+)
+
+export const recentlyPlayed: MusicItem[] = [
+  item('r1', 'Drive', 'Alessandro • 192 pistas', 'playlist', 'drive'),
+  item('r2', 'Worthy', 'The Home Team • 2.6 M de vistas', 'video', 'worthy'),
+  item('r3', 'Apocalypse', 'Cigarettes After Sex • Canción', 'song', 'cas-apocalypse'),
+  item('r4', 'Peaches', 'Justin Bieber • Canción', 'song', 'jb-peaches'),
+  item('r5', 'Stitches', 'Shawn Mendes • Canción', 'song', 'sm-stitches'),
+  item('r6', 'Clásicos', 'Alessandro • 58 pistas', 'playlist', 'clasicos'),
+]
+
+export const yourMixes: MusicItem[] = [
+  item('m1', 'Mix 1', 'Bad Omens, Asking Alexandria y más', 'playlist', 'mix1'),
+  item('m2', 'Mix 2', 'The Police, Sting y más', 'playlist', 'mix2'),
+  item('m3', 'Mix 3', 'Korn, Slayer, Motionless In White', 'playlist', 'mix3'),
+  item('m4', 'Mix Chill', 'Lofi, Jazz y más', 'playlist', 'mix4'),
+  item('m5', 'Mix Pop', 'Katy Perry, Doechii y más', 'playlist', 'mix5'),
+  item('m6', 'Mix Rock', 'Three Days Grace, ONE OK ROCK', 'playlist', 'mix6'),
+]
+
+export const recommendations: MusicItem[] = [
+   item('rc1', 'Cigarettes After Sex', 'Álbum • Cigarettes After Sex', 'album', 'cas-album'),
+  item('rc2', 'Justice', 'Álbum • Justin Bieber', 'album', 'jb-justice'),
+  item('rc3', 'Illuminate', 'Álbum • Shawn Mendes', 'album', 'sm-illuminate'),
+  item('rc4', 'Re:make', 'ONE OK ROCK • 65 M de vistas', 'video', 'remake'),
+  item('rc5', 'America', 'Motionless In White • 26 M de vistas', 'video', 'america'),
+  item('rc6', 'BAD', 'ATEEZ • 114 M de vistas', 'video', 'bad'),
+]
+
+export const topHits: MusicItem[] = [
+  item('t1', 'California Gurls', 'Katy Perry • 1239 M', 'song', 'cali'),
+  item('t2', 'Sweet', 'Cigarettes After Sex • 300 M', 'song', 'cas-sweet'),
+  item('t3', 'Ghost', 'Justin Bieber • 1100 M', 'song', 'jb-ghost'),
+  item('t4', 'Treat You Better', 'Shawn Mendes • 1500 M', 'song', 'sm-treat'),
+  item('t5', 'Peligro', 'Reik • 79 M', 'song', 'peligro'),
+  item('t6', 'Any Kind of Guy', 'Big Time Rush • 121 M', 'song', 'btr'),
+]
+
+export const newReleases: MusicItem[] = [
+  item('n1', 'Finding God Before God Finds Me', 'Álbum • Bad Omens', 'album', 'finding'),
+  item('n2', 'Nuevo Sencillo', 'Sencillo • Doechii', 'song', 'nuevo1'),
+  item('n3', 'Synchronicity', 'Álbum • The Police', 'album', 'sync'),
+  item('n4', 'Deviance', 'Slayer • 1 M de vistas', 'video', 'deviance'),
+  item('n5', 'VIRGIN', 'exist trace • EP', 'album', 'virgin'),
+  item('n6', 'Teenage Dream', 'Katy Perry • Álbum', 'album', 'teenage'),
+]
+
+export const quickPicks: MusicItem[] = [
+  item('q1', 'Worthy', 'The Home Team • 9.4 M', 'song', 'qp1'),
+  item('q2', 'Pump It', 'Electric Callboy • 54 M', 'song', 'qp2'),
+   item('q3', 'K.', 'Cigarettes After Sex • 400 M', 'song', 'qp13'),
+  item('q4', 'Peaches', 'Justin Bieber • 1500 M', 'song', 'qp14'),
+  item('q5', 'Señorita', 'Shawn Mendes • 2000 M', 'song', 'qp15'),
+  item('q7', 'California Gurls', 'Katy Perry • 1239 M', 'song', 'qp7'),
+  item('q8', 'Any Kind of Guy', 'Big Time Rush • 121 M', 'song', 'qp8'),
+  item('q9', 'Kingslayer', 'Bring Me The Horizon • 6 M', 'song', 'qp9'),
+  item('q10', 'THE DEATH OF PEACE OF MIND', 'Bad Omens • 110 M', 'song', 'qp10'),
+  item('q11', 'Coming Undone', 'Korn • 341 M', 'song', 'qp11'),
+  item('q12', 'Super Girl', 'SUPER JUNIOR-M • 50 M', 'song', 'qp12'),
+]
+
+export const userPlaylists: UserPlaylist[] = [
+  { id: 'p1', name: 'Música que te gustó', owner: 'Playlist autogenerada' },
+  { id: 'p2', name: 'Drive', owner: 'Alessandro' },
+  { id: 'p3', name: 'Música navideña', owner: 'Alessandro' },
+  { id: 'p4', name: 'Clásicos', owner: 'Alessandro' },
+  { id: 'p5', name: 'Favoritas', owner: 'Alessandro' },
+]

@@ -1,0 +1,15 @@
+:root {
+
+  --color-bg: #030303;
+  --color-surface: #212121;
+  --color-text: #ffffff;
+  --color-text-secondary: #aaaaaa;
+  --color-hover: rgba(255, 255, 255, 0.1);
+  --color-accent: #ff0000;
+
+  --sidebar-width: 240px;
+  --card-size: 160px;
+  --radius: 8px;
+
+  --font-main: 'Roboto', Arial, sans-serif;
+}

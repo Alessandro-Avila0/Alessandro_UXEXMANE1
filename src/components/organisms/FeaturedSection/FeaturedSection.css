@@ -1,0 +1,21 @@
+.featured {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2a2a2a, #0b0b0b);
+}
+.featured__cover { width: 200px; height: 200px; border-radius: var(--radius); object-fit: cover; flex-shrink: 0; }
+.featured__info { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.featured__label { font-size: 12px; text-transform: uppercase; color: var(--color-text-secondary); letter-spacing: 1px; }
+.featured__title { font-size: 32px; font-weight: 700; }
+.featured__artist { color: var(--color-text-secondary); margin-bottom: 8px; }
+
+@media (max-width: 600px) {
+  .featured { flex-direction: column; text-align: center; }
+  .featured__info { align-items: center; }
+  .featured__cover { width: 160px; height: 160px; }
+  .featured__title { font-size: 22px; }
+}
